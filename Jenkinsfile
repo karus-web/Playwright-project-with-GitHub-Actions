@@ -4,17 +4,7 @@ pipeline {
         PATH = "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
     }
     stages {
-        // stage('Checkout the code') {
-        //     steps {
-        //         echo 'Checking out source code...'
-        //         checkout changelog: false, poll: false, scm: scmGit(
-        //             branches: [[name: '*/main']],
-        //             extensions: [],
-        //             userRemoteConfigs: [[url: 'https://github.com/karus-web/Playwright-project-with-GitHub-Actions.git']]
-        //         )
-        //     }
-        // }
-
+        
         stage('Install dependencies') {
             steps {
                 sh '''
